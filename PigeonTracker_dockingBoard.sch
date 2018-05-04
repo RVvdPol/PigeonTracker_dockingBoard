@@ -1,1 +1,269 @@
 EESchema Schematic File Version 2
+LIBS:power
+LIBS:device
+LIBS:transistors
+LIBS:conn
+LIBS:linear
+LIBS:regul
+LIBS:74xx
+LIBS:cmos4000
+LIBS:adc-dac
+LIBS:memory
+LIBS:xilinx
+LIBS:microcontrollers
+LIBS:dsp
+LIBS:microchip
+LIBS:analog_switches
+LIBS:motorola
+LIBS:texas
+LIBS:intel
+LIBS:audio
+LIBS:interface
+LIBS:digital-audio
+LIBS:philips
+LIBS:display
+LIBS:cypress
+LIBS:siliconi
+LIBS:opto
+LIBS:atmel
+LIBS:contrib
+LIBS:valves
+LIBS:ProjectLib
+EELAYER 25 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 1 1
+Title ""
+Date ""
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L CONN_01X07 J?
+U 1 1 5AEC33F9
+P 6000 2050
+F 0 "J?" H 6000 2450 50  0000 C CNN
+F 1 "CONN_01X07" V 6100 2050 50  0000 C CNN
+F 2 "" H 6000 2050 50  0001 C CNN
+F 3 "" H 6000 2050 50  0001 C CNN
+	1    6000 2050
+	1    0    0    -1  
+$EndComp
+$Comp
+L MCP73831 U?
+U 1 1 5AEC3A07
+P 3050 1750
+F 0 "U?" H 3150 1400 60  0000 C CNN
+F 1 "MCP73831" H 3050 2000 60  0000 C CNN
+F 2 "" H 3050 1750 60  0001 C CNN
+F 3 "" H 3050 1750 60  0001 C CNN
+	1    3050 1750
+	1    0    0    -1  
+$EndComp
+$Comp
+L GND #PWR?
+U 1 1 5AEC3BAF
+P 5750 2400
+F 0 "#PWR?" H 5750 2150 50  0001 C CNN
+F 1 "GND" H 5750 2250 50  0000 C CNN
+F 2 "" H 5750 2400 50  0001 C CNN
+F 3 "" H 5750 2400 50  0001 C CNN
+	1    5750 2400
+	1    0    0    -1  
+$EndComp
+Text Label 5450 1750 0    60   ~ 0
+Vbat
+Text Label 5450 1850 0    60   ~ 0
+Reset
+Text Label 5450 1950 0    60   ~ 0
+SWCLK
+Text Label 5450 2050 0    60   ~ 0
+SWDIO
+Text Label 5450 2150 0    60   ~ 0
+Uart_TX
+Text Label 5450 2250 0    60   ~ 0
+Uart_Rx
+Wire Wire Line
+	5800 2350 5750 2350
+Wire Wire Line
+	5750 2350 5750 2400
+Wire Wire Line
+	5450 1750 5800 1750
+Wire Wire Line
+	5450 1850 5800 1850
+Wire Wire Line
+	5450 1950 5800 1950
+Wire Wire Line
+	5450 2050 5800 2050
+Wire Wire Line
+	5450 2150 5800 2150
+Wire Wire Line
+	5800 2250 5450 2250
+$Comp
+L LED D?
+U 1 1 5AEC3DB6
+P 1950 1800
+F 0 "D?" H 1950 1900 50  0000 C CNN
+F 1 "LED" H 1950 1700 50  0000 C CNN
+F 2 "" H 1950 1800 50  0001 C CNN
+F 3 "" H 1950 1800 50  0001 C CNN
+	1    1950 1800
+	-1   0    0    1   
+$EndComp
+$Comp
+L R R?
+U 1 1 5AEC3E67
+P 2350 1800
+F 0 "R?" V 2430 1800 50  0000 C CNN
+F 1 "470R" V 2350 1800 50  0000 C CNN
+F 2 "" V 2280 1800 50  0001 C CNN
+F 3 "" H 2350 1800 50  0001 C CNN
+	1    2350 1800
+	0    1    1    0   
+$EndComp
+$Comp
+L C C?
+U 1 1 5AEC3EA8
+P 1550 1850
+F 0 "C?" H 1575 1950 50  0000 L CNN
+F 1 "C" H 1575 1750 50  0000 L CNN
+F 2 "" H 1588 1700 50  0001 C CNN
+F 3 "" H 1550 1850 50  0001 C CNN
+	1    1550 1850
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1250 1650 2600 1650
+Wire Wire Line
+	1750 1650 1750 1800
+Wire Wire Line
+	1750 1800 1800 1800
+Connection ~ 1750 1650
+Wire Wire Line
+	2100 1800 2200 1800
+Wire Wire Line
+	2500 1800 2600 1800
+Wire Wire Line
+	1550 1650 1550 1700
+Connection ~ 1550 1650
+Wire Wire Line
+	2600 1950 2550 1950
+Wire Wire Line
+	2550 1950 2550 2250
+$Comp
+L GND #PWR?
+U 1 1 5AEC413C
+P 2550 2250
+F 0 "#PWR?" H 2550 2000 50  0001 C CNN
+F 1 "GND" H 2550 2100 50  0000 C CNN
+F 2 "" H 2550 2250 50  0001 C CNN
+F 3 "" H 2550 2250 50  0001 C CNN
+	1    2550 2250
+	1    0    0    -1  
+$EndComp
+$Comp
+L R R?
+U 1 1 5AEC41D3
+P 3300 2200
+F 0 "R?" V 3380 2200 50  0000 C CNN
+F 1 "10k" V 3300 2200 50  0000 C CNN
+F 2 "" V 3230 2200 50  0001 C CNN
+F 3 "" H 3300 2200 50  0001 C CNN
+	1    3300 2200
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	3500 1950 3550 1950
+Wire Wire Line
+	3550 1950 3550 2200
+Wire Wire Line
+	3550 2200 3450 2200
+Wire Wire Line
+	3150 2200 2550 2200
+Connection ~ 2550 2200
+$Comp
+L GND #PWR?
+U 1 1 5AEC4255
+P 1550 2100
+F 0 "#PWR?" H 1550 1850 50  0001 C CNN
+F 1 "GND" H 1550 1950 50  0000 C CNN
+F 2 "" H 1550 2100 50  0001 C CNN
+F 3 "" H 1550 2100 50  0001 C CNN
+	1    1550 2100
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1550 2000 1550 2100
+$Comp
+L C C?
+U 1 1 5AEC4339
+P 3650 1850
+F 0 "C?" H 3675 1950 50  0000 L CNN
+F 1 "C" H 3675 1750 50  0000 L CNN
+F 2 "" H 3688 1700 50  0001 C CNN
+F 3 "" H 3650 1850 50  0001 C CNN
+	1    3650 1850
+	1    0    0    -1  
+$EndComp
+$Comp
+L C C?
+U 1 1 5AEC4388
+P 3900 1850
+F 0 "C?" H 3925 1950 50  0000 L CNN
+F 1 "C" H 3925 1750 50  0000 L CNN
+F 2 "" H 3938 1700 50  0001 C CNN
+F 3 "" H 3900 1850 50  0001 C CNN
+	1    3900 1850
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3500 1650 4200 1650
+Wire Wire Line
+	3900 1650 3900 1700
+Wire Wire Line
+	3650 1700 3650 1650
+Connection ~ 3650 1650
+Wire Wire Line
+	3650 2000 3650 2050
+Wire Wire Line
+	3650 2050 3900 2050
+Wire Wire Line
+	3900 2050 3900 2000
+$Comp
+L GND #PWR?
+U 1 1 5AEC442E
+P 3800 2100
+F 0 "#PWR?" H 3800 1850 50  0001 C CNN
+F 1 "GND" H 3800 1950 50  0000 C CNN
+F 2 "" H 3800 2100 50  0001 C CNN
+F 3 "" H 3800 2100 50  0001 C CNN
+	1    3800 2100
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3800 2050 3800 2100
+Connection ~ 3800 2050
+Connection ~ 3900 1650
+Text Label 4200 1650 2    60   ~ 0
+Vbat
+$Comp
+L +5V #PWR?
+U 1 1 5AEC475D
+P 1250 1600
+F 0 "#PWR?" H 1250 1450 50  0001 C CNN
+F 1 "+5V" H 1250 1740 50  0000 C CNN
+F 2 "" H 1250 1600 50  0001 C CNN
+F 3 "" H 1250 1600 50  0001 C CNN
+	1    1250 1600
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1250 1600 1250 1650
+Text Notes 2700 2450 0    60   ~ 0
+10k = 100mA charge rate
+$EndSCHEMATC
